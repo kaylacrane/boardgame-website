@@ -1,14 +1,14 @@
 <template>
-  <div>{{ name }}</div>
+  <div>Board Games</div>
   <ul class="bg-grid">
  
-      <BoardgameCard  v-for="game in gamesList" v-bind:key="game.id" :name="game.name"></BoardgameCard>
+      <BoardgameCard  v-for="game in gamesList" v-bind:key="game.id" :data-id="game.id" :name="game.name" :image="game.image"></BoardgameCard>
  
   </ul>
 </template>
 
 <script>
-// import BoardGamesApi from "@/services/fetchGames";
+
 import BoardgameCard from "./BoardgameCard.vue";
 
 
@@ -40,6 +40,6 @@ gamesList:[]
 <style lang="scss" scoped>
 .bg-grid {
   display: grid;
-  grid-template: auto / 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 </style>
