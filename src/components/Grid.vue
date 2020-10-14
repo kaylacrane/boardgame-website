@@ -1,8 +1,7 @@
 <template>
-  <div>Board Games</div>
+
   <ul class="bg-grid">
- 
-      <BoardgameCard  v-for="game in gamesList" v-bind:key="game.id" :data-id="game.id" :name="game.name" :image="game.image"></BoardgameCard>
+       <BoardgameCard  v-for="game in gamesList" v-bind:key="game.gameId" :data-id="game.gameId" :name="game.name" :image="game.image" :favorite="game.owned"></BoardgameCard>
  
   </ul>
 </template>
@@ -17,7 +16,7 @@ export default {
     components: {
     BoardgameCard,
   },
-  props: String ,
+  props: [] ,
   //lifecycle method mounted is for executing things when component has just been mounted
   mounted() {
     
@@ -41,5 +40,8 @@ gamesList:[]
 .bg-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin:  auto;
+  padding: 0;
+  grid-gap: 2px;
 }
 </style>
