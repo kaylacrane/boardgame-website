@@ -1,15 +1,14 @@
 <template>
-  <h1 class="page-title">Board Games</h1>
-  <Grid title="BoardGames" />
+  <Home />
 </template>
 
 <script>
-import Grid from "./components/Grid.vue";
+import Home from "./components/Home.vue";
 
 export default {
   name: "App",
   components: {
-    Grid,
+    Home,
   },
 };
 </script>
@@ -23,8 +22,8 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.page-title{
-   font-family:'Oswald', sans-serif;
-   font-size: 50px;
+.page-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 50px;
 }
 </style>
